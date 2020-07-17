@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,61 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicAnalyticsFramework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ctT-N5-dwG">
+                                <rect key="frame" x="97" y="221" width="220" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFk-hW-uXj">
+                                <rect key="frame" x="61" y="358" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="HBF-bm-HLn"/>
+                                    <constraint firstAttribute="height" constant="30" id="jpQ-ZV-rbd"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-US-BFh">
+                                <rect key="frame" x="293" y="358" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fHc-d5-9h3"/>
+                                    <constraint firstAttribute="width" constant="60" id="wHu-6N-4ui"/>
+                                </constraints>
+                                <state key="normal" title="Register"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ctT-N5-dwG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="6Jf-8l-l2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ctT-N5-dwG" secondAttribute="trailing" constant="99" id="9qf-81-ghd"/>
+                            <constraint firstItem="aFk-hW-uXj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="ZBk-Js-PuF"/>
+                            <constraint firstItem="q9h-US-BFh" firstAttribute="top" secondItem="ctT-N5-dwG" secondAttribute="bottom" constant="107" id="cGG-f1-3B4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9h-US-BFh" secondAttribute="trailing" constant="61" id="dEe-bC-1fm"/>
+                            <constraint firstItem="aFk-hW-uXj" firstAttribute="top" secondItem="ctT-N5-dwG" secondAttribute="bottom" constant="107" id="fAv-gz-Umy"/>
+                            <constraint firstItem="ctT-N5-dwG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="mLp-Iu-N0R"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="jFz-F6-Lp9" appends="YES" id="rTS-CV-Q1w"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="aFk-hW-uXj" id="gwI-wW-sjO"/>
+                        <outlet property="registerButton" destination="q9h-US-BFh" id="1oC-13-Tzp"/>
+                        <outlet property="slider" destination="ctT-N5-dwG" id="eqI-q1-X6w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jFz-F6-Lp9">
+                    <connections>
+                        <action selector="screenTapped:" destination="BYZ-38-t0r" id="OjU-MR-6fv"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="126.5625"/>
         </scene>
     </scenes>
 </document>

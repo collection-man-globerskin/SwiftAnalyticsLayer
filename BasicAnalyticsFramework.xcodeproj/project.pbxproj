@@ -13,6 +13,11 @@
 		5C51829524C11E140079AA1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C51829324C11E140079AA1B /* Main.storyboard */; };
 		5C51829724C11E160079AA1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C51829624C11E160079AA1B /* Assets.xcassets */; };
 		5C51829A24C11E160079AA1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C51829824C11E160079AA1B /* LaunchScreen.storyboard */; };
+		5C5182A324C11E410079AA1B /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5182A224C11E410079AA1B /* AnalyticsEngine.swift */; };
+		5C5182A524C11F170079AA1B /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5182A424C11F170079AA1B /* AnalyticsEvent.swift */; };
+		5C5182A724C12A120079AA1B /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5182A624C12A120079AA1B /* AnalyticsManager.swift */; };
+		5C5182A924C12B8E0079AA1B /* AnalyticsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5182A824C12B8E0079AA1B /* AnalyticsDatabase.swift */; };
+		5C5182AB24C12D420079AA1B /* AnalyticsRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5182AA24C12D420079AA1B /* AnalyticsRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		5C51829624C11E160079AA1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C51829924C11E160079AA1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C51829B24C11E160079AA1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C5182A224C11E410079AA1B /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
+		5C5182A424C11F170079AA1B /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		5C5182A624C12A120079AA1B /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		5C5182A824C12B8E0079AA1B /* AnalyticsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDatabase.swift; sourceTree = "<group>"; };
+		5C5182AA24C12D420079AA1B /* AnalyticsRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		5C51828C24C11E140079AA1B /* BasicAnalyticsFramework */ = {
 			isa = PBXGroup;
 			children = (
+				5C5182A124C11E1E0079AA1B /* AnalyticsFramework */,
 				5C51828D24C11E140079AA1B /* AppDelegate.swift */,
 				5C51828F24C11E140079AA1B /* SceneDelegate.swift */,
 				5C51829124C11E140079AA1B /* ViewController.swift */,
@@ -65,6 +76,18 @@
 				5C51829B24C11E160079AA1B /* Info.plist */,
 			);
 			path = BasicAnalyticsFramework;
+			sourceTree = "<group>";
+		};
+		5C5182A124C11E1E0079AA1B /* AnalyticsFramework */ = {
+			isa = PBXGroup;
+			children = (
+				5C5182A224C11E410079AA1B /* AnalyticsEngine.swift */,
+				5C5182A424C11F170079AA1B /* AnalyticsEvent.swift */,
+				5C5182A624C12A120079AA1B /* AnalyticsManager.swift */,
+				5C5182A824C12B8E0079AA1B /* AnalyticsDatabase.swift */,
+				5C5182AA24C12D420079AA1B /* AnalyticsRecord.swift */,
+			);
+			path = AnalyticsFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5182A724C12A120079AA1B /* AnalyticsManager.swift in Sources */,
 				5C51829224C11E140079AA1B /* ViewController.swift in Sources */,
+				5C5182A924C12B8E0079AA1B /* AnalyticsDatabase.swift in Sources */,
 				5C51828E24C11E140079AA1B /* AppDelegate.swift in Sources */,
+				5C5182A524C11F170079AA1B /* AnalyticsEvent.swift in Sources */,
+				5C5182A324C11E410079AA1B /* AnalyticsEngine.swift in Sources */,
 				5C51829024C11E140079AA1B /* SceneDelegate.swift in Sources */,
+				5C5182AB24C12D420079AA1B /* AnalyticsRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
